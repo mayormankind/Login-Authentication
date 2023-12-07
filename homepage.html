@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+    <main class="app">
+        <header>
+            <div class="wrap">
+                <h3>Pandora Express</h3>
+                <h3>Welcome back, <span id="username"></span></h3>
+            </div>
+            <button id="logout">Logout</button>
+        </header>
+        <section>
+            <h3>Available drifts!</h3>
+            <div class="products">
+                <div class="product">
+                    <div class="contentCard">
+                        <img src="images/5.jpg" alt="" class="img">
+                    </div>
+                    <div class="price">
+                        <p>price: <span>$1000</span>/hour</p>
+                        <button>Checkout --></button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="contentCard">
+                        <img src="images/2.jpg" alt="" class="img">
+                    </div>
+                    <div class="price">
+                        <p>price: <span>$3000</span>/hour</p>
+                        <button>Checkout --></button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="contentCard">
+                        <img src="images/3.jpg" alt="" class="img">
+                    </div>
+                    <div class="price">
+                        <p>price: <span>$7000</span>/hour</p>
+                        <button>Checkout --></button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="contentCard">
+                        <img src="images/2.jpg" alt="" class="img">
+                    </div>
+                    <div class="price">
+                        <p>price: <span>$500</span>/hour</p>
+                        <button>Checkout --></button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="contentCard">
+                        <img src="images/5.jpg" alt="" class="img">
+                    </div>
+                    <div class="price">
+                        <p>price: <span>$1500</span>/hour</p>
+                        <button>Checkout --></button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="contentCard">
+                        <img src="images/6.jpg" alt="" class="img">
+                    </div>
+                    <div class="price">
+                        <p>price: <span>$15000</span>/hour</p>
+                        <button>Checkout --></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="wrap">
+                <p>copyright © 2023 Pandora Express</p>
+                <ul>
+                    <li><a href="www.facebook.com">Facebook</a></li>
+                    <li><a href="www.instagram.com">Instagram</a></li>
+                    <li><a href="www.whatsapp.com">Whatsapp</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+    <script>
+        const username = document.querySelector('#username');
+        const logout = document.querySelector('#logout');
+        window.addEventListener('load',()=>{
+            username.textContent = localStorage.getItem('xprname')
+        })
+        logout.addEventListener('click',()=>{
+            localStorage.removeItem('xprname');
+            location.replace('index.html')
+        })
+    </script>
+</body>
+</html>
